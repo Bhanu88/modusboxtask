@@ -1,0 +1,31 @@
+---
+  - name: "Step 1"
+    hosts: localhost
+    connection: local 
+    tasks:
+
+    - name: "Executing Terraform and installing aks"
+      shell: "./aks.sh"
+      register: "output"
+    - debug: var=output.stdout_lines
+    
+    
+  - name: "Step 2"
+    hosts: localhost
+    connection: local 
+    tasks:
+
+    - name: "installing ingress gateway"
+      shell: "./ingress.sh"
+      register: "output"
+    - debug: var=output.stdout_lines
+
+  - name: "Step 3"
+    hosts: localhost
+    connection: local 
+    tasks:
+
+    - name: "installing app"
+      shell: "./app.sh"
+      register: "output"
+    - debug: var=output.stdout_lines    
