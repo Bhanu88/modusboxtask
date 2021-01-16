@@ -10,9 +10,10 @@ You can use the Cloud Provider most suitable to you, latest version of terraform
 
 # Prerequisite
 OS : Ubuntu 18.04
-1.Terraform (v0.14.4 and above)
-2.kubectl
-3.ansible (ansible 2.9.16 and above)
+
+1. Terraform (v0.14.4 and above)
+2. kubectl
+3. ansible (ansible 2.9.16 and above)
 
 
 # Preaparing infra and installing application 
